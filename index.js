@@ -7,6 +7,7 @@ const app = express();
 const registerRouter = require("./routes/register");
 const loginRouter = require("./routes/login");
 const newsPreferencesRouter = require("./routes/preferences");
+const newsRouter = require("./routes/getNews");
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -27,6 +28,7 @@ try {
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/preferences", newsPreferencesRouter);
+app.use("/news", newsRouter);
 
 app.listen(port, (err) => {
   if (err) {
