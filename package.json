@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rahljoshi/News-Aggregator-API.git"
+    "url": "git+https://github.com/rahljoshi/news-aggregator-tests.git"
   },
   "author": "Rahul Joshi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rahljoshi/News-Aggregator-API/issues"
+    "url": "https://github.com/rahljoshi/news-aggregator-tests/issues"
   },
-  "homepage": "https://github.com/rahljoshi/News-Aggregator-API#readme",
+  "homepage": "https://github.com/rahljoshi/news-aggregator-tests`#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
