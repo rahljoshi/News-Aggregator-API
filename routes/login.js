@@ -36,7 +36,7 @@ loginRouter.post("/", (req, res) => {
         user: {
           id: user._id,
           email: user.email,
-          fullName: user.fullName,
+          username: user.username,
         },
         message: "Login successfull",
         accessToken: token,

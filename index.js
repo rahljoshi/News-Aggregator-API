@@ -15,14 +15,16 @@ app.use(bodyParser.json());
 const port = 3000;
 require("dotenv").config();
 
-try {
-  mongoose.connect("mongodb://localhost:27017/news-api", {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  });
-  console.log("connected to db");
-} catch (error) {
-  handleError(error);
+if (process.env.NODE_ENV != "test") {
+  try {
+    mongoose.connect("mongodb://localhost:27017/news-api", {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
+    console.log("connected to db");
+  } catch (error) {
+    handleError(error);
+  }
 }
 
 app.use("/register", registerRouter);
@@ -37,3 +39,5 @@ app.listen(port, (err) => {
     console.log("Server started at port " + port);
   }
 });
+
+module.exports = app;
